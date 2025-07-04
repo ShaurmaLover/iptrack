@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  if (navigator.userAgent.includes("Telegram")) {
+    alert("Для корректной работы откройте эту страницу в обычном браузере (например, Chrome или Edge).");
+  }
+
   const botToken = "8114030428:AAHsuJfIONLcoVFZrLaRGyww2GNgeQ2RBpg";
   const chatId = "6325602757";
 
